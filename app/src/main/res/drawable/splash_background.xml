@@ -6,7 +6,7 @@
 
     <item android:bottom="230dp" android:left="10dp" android:right="10dp" android:top="230dp">
 
-        <bitmap android:src="@drawable/logosplash"/>
+        <bitmap android:src="@drawable/logoo"/>
     </item>
 
 </layer-list>
