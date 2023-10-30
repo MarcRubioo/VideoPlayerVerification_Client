@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">VideoPlayerVerification_Client</string>
+    <string name="introdueix_el_codi_per_visualitzar_el_codi">Introdueix el codi per visualitzar el codi</string>
+    <string name="bobby_codi">Bobby Codi!</string>
+    <string name="enviar">Enviar</string>
+    <string name="codi">Codi</string>
 </resources>
