@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import cat.insvidreres.ima.videoplayerverification_client.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
@@ -12,5 +13,13 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        Socket.setSocket()
+        Socket.establishConnection()
+
+        val mSocket = Socket.getSocket()
+        val codi = binding.editTextText.text
+        mSocket.emit("EnviarCodiPeli", codi)
+
     }
 }
