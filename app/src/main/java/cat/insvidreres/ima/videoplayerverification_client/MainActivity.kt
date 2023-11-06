@@ -19,7 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         val mSocket = Socket.getSocket()
         val codi = binding.editTextText.text
-        mSocket.emit("EnviarCodiPeli", codi)
 
+        binding.button.setOnClickListener{
+            mSocket.emit("EnviarCodiPeli", codi.toString())
+
+        }
     }
 }
