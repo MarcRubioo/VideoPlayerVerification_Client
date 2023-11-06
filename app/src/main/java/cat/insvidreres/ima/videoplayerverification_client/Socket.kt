@@ -10,7 +10,7 @@ object Socket  {
     @Synchronized
     fun setSocket() {
         try {
-            mSocket = IO.socket("https://localhost:8888")
+            mSocket = IO.socket("https://localhost:3000")
         } catch (e: URISyntaxException) {
 
         }
