@@ -2,6 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="naranja"></color>
+    <color name="naranja">#f8982a</color>
     <color name="negroMate">#1F1F1F1F</color>
 </resources>
