@@ -2,6 +2,7 @@ package cat.insvidreres.ima.videoplayerverification_client
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import cat.insvidreres.ima.videoplayerverification_client.databinding.ActivityMainBinding
 
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding.button.setOnClickListener{
             mSocket.emit("EnviarCodiPeli", codi.toString())
 
+            Toast.makeText(this, "Codi enviat!!! ", Toast.LENGTH_SHORT).show()
         }
     }
 }
