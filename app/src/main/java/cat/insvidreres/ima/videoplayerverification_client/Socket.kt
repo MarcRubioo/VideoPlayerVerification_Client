@@ -12,7 +12,7 @@ object Socket  {
     @Synchronized
     fun setSocket() {
         try {
-            mSocket = IO.socket("http://localhost:8888")
+            mSocket = IO.socket("http://169.254.180.117:8888")
         } catch (e: URISyntaxException) {
         }
     }
