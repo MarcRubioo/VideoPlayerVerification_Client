@@ -1,7 +1,9 @@
 package cat.insvidreres.ima.videoplayerverification_client
 
-import io.socket.client.IO
-import io.socket.client.Socket
+import android.widget.Toast
+import io.socket.client.IO;
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 import java.net.URISyntaxException
 
 object Socket  {
@@ -12,7 +14,6 @@ object Socket  {
         try {
             mSocket = IO.socket("https://localhost:8888")
         } catch (e: URISyntaxException) {
-
         }
     }
     @Synchronized
