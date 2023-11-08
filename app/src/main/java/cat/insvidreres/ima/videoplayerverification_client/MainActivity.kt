@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.button.setOnClickListener{
             mSocket.emit("EnviarCodiPeli", codi.toString())
+
             Toast.makeText(this, "Codi enviat!!! ", Toast.LENGTH_SHORT).show()
         }
     }
