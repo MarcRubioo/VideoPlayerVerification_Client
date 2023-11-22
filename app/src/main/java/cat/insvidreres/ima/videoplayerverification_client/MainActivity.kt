@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import cat.insvidreres.ima.videoplayerverification_client.databinding.ActivityMainBinding
+import io.socket.emitter.Emitter
 
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         val mSocket = Socket.getSocket()
         val codi = binding.editTextText.text
+
+        mSocket.on("HOLA", Emitter.Listener { args ->
+            val message = args[0] as String
+            println("RECEIVED HOLA EVENT: $message")
+        })
 
         binding.button.setOnClickListener{
             mSocket.emit("EnviarCodiPeli", codi.toString())

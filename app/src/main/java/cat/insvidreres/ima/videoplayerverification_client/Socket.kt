@@ -14,6 +14,7 @@ object Socket  {
         try {
             mSocket = IO.socket("http://169.254.180.117:8888")
         } catch (e: URISyntaxException) {
+            e.printStackTrace()
         }
     }
     @Synchronized
