@@ -22,10 +22,10 @@ class MainActivity : AppCompatActivity() {
         val mSocket = Socket.getSocket()
         val codi = binding.editTextText.text
 
-        mSocket.on("HOLA", Emitter.Listener { args ->
-            val message = args[0] as String
-            println("RECEIVED HOLA EVENT: $message")
-        })
+//        mSocket.on("HOLA", Emitter.Listener { args ->
+//            val message = args[0] as String
+//            println("RECEIVED HOLA EVENT: $message")
+//        })
 
         binding.button.setOnClickListener{
             mSocket.emit("EnviarCodiPeli", codi.toString())
